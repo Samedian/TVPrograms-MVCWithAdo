@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CodingChallengeThird.Models.TVProgramModel>
+
+@{
+    Layout = null;
+}
+ <br />
+    <br />
+    <form method="post" style="text-align:center">
+
+        <label for="TVChanneltype"> Choose TV Channel Type :</label>
+        <select name="TVChanneltype" id="TVChanneltype">
+
+            @foreach (string item in ViewBag.Channel)
+            {
+                <option value="@item">@item</option>
+            }
+
+        </select>
+
+        <input type="submit" />
+    </form>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CodingChallengeThird.Models.TVProgramModel>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramChannelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TVProgramDuration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.tVProgramModels) {
+    <tr>
+        <td>
+            @item.TVProgramId
+        </td>
+        <td>
+            @item.TVProgramName
+        </td>
+        <td>
+            @item.TVProgramCategory
+        </td>
+        <td>
+            @item.TVProgramChannelName
+        </td>
+        <td>
+            @item.TVProgramDesc
+        </td>
+        <td>
+            @item.TVProgramDuration
+        </td>
+       
+    </tr>
+}
+
+</table>

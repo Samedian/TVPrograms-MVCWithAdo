@@ -1,0 +1,50 @@
+﻿@using CodingChallengeThird.Models
+@{
+    Layout = null;
+}
+
+<br />
+<br />
+@Html.ActionLink("Back to menu", "Index")
+<br />
+<br />
+<form method="post" style="text-align:center">
+    <label>TV Channel Name :</label>
+    <input type="text" id="TVChannelName" name="TVChannelName" />
+
+    <br />
+    <br />
+
+    <label for="TVChannelType"> Choose TV Channel Type :</label>
+    <select name="TVChannelType" id="TVChannelType">
+
+        <option value="News">News</option>
+        <option value="Discovery">Discovery</option>
+        <option value="Movies">Movies</option>
+        <option value="Religious">Religious</option>
+        <option value="Cartoon">Cartoon</option>
+        <option value="Serials">Serials</option>
+
+    </select>
+
+    <br />
+    <br />
+
+    <label for="Description">Description</label>
+    <input type="text" id="Description" name="Description" />
+
+    <br />
+    <input type="submit" value="Save" name="Save" class="btn btn-default" onclick="myFun(ViewBag.Message)" />
+    <input type="submit" value="Cancel" name="Cancel" class="btn btn-default" />
+
+</form>
+
+<script>
+    function myFun(message) {
+        if (message != null)
+            alert(message);
+        else
+            alert("Something happens");
+
+    }
+</script>

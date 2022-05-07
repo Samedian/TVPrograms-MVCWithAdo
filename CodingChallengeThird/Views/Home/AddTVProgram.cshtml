@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+<br />
+<br />
+<form method="post" style="text-align:center">
+    <label for="TVProgramName">TV Program Name</label>
+    <input type="text" id="TVProgramName" name="TVProgramName" />
+
+    <br />
+    <br />
+    <p>TV Program Category</p>
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="News" />
+    <label for="News">News</label>
+    <br />
+
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="Dicovery" />
+    <label for="Dicovery">Dicovery</label>
+    <br />
+
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="Movie" />
+    <label for="Movie">Movie</label>
+    <br />
+
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="Religious" />
+    <label for="Religious">Religious</label>
+    <br />
+
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="Cartoon" />
+    <label for="Cartoon">Cartoon</label>
+    <br />
+
+    <input type="radio" id="TVProgramCategory" name="TVProgramCategory" value="Serial" />
+    <label for="Serial">Serial</label>
+
+    <br />
+    <br />
+
+    <label for="TVProgramChannelName"> Choose TV Channel :</label>
+    <select name="TVProgramChannelName" id="TVProgramChannelName">
+
+        @foreach (CodingChallengeThird.Models.TVChannelModel item in ViewBag.Channel)
+        {
+            <option value="@item.TVChannelName">@item.TVChannelName</option>
+        }
+
+    </select>
+
+    <br />
+    <br />
+
+    <label for="TVProgramDesc">TV Program Description</label>
+    <input type="text" id="TVProgramDesc" name="TVProgramDesc" />
+
+    <br />
+    <br />
+
+    <label for="TVProgramDuration">TV Program Duration</label>
+    <input type="text" id="TVProgramDuration" name="TVProgramDuration" />
+
+    <br />
+    <br />
+    <input type="submit" value="Save" name="Save" class="btn btn-default" ) />
+    <input type="submit" value="Cancel" name="Cancel" class="btn btn-default" ) />
+
+
+</form>
